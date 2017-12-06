@@ -2,23 +2,70 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:after { visibility: hidden; display: block; font-size: 0; content: ""; clear: both; height: 0;}
 
-    // WRAPPER
-.wrapper-outer {
-    max-width: 1600px;
-    margin: 0 auto;
-}
+    // FLEX SETTINGS
 
-.wrapper-inner {
-    max-width: 1175px;
-    margin: 0 auto;
-}
+    .flex {
+        display: flex;
+    }
+    .flex-column {
+        flex-direction: column;
+    }
 
-    // BASIC STYLE RESETS
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    .flex-center {
+        justify-content: center;
+        align-items: center;
+    }
+
+       // TYPOGRAPHY SETTINGS
+    body {
+        font-family: 'Lato', sans-serif;    
+    }
+    h1, h2, h3, h4, h5, h6 {margin: 0;}
+    
+    h1 {
+        font-size: 45px;
+        margin: 0;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 30px;
+    }
+
+    .header-h2 {
+        line-height: 1.5;
+    }
+    .header-title h1 {
+        font-size: 58px;
+    }
+    .header-year h1 {
+        font-size: 150px;
+        font-weight: 900;
+    }
+
+       // WRAPPER
+    .wrapper-outer {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .wrapper-inner {
+        max-width: 1175px;
+        margin: 0 auto;
+    }
+
+    // BASIC STYLE RESETS AND HELPERS
+
+    .absolute {position: absolute;}
+    .relative {position: relative;}
 
     a {
         text-decoration: none;
     }
-
 
 /*COLOUR SETTINGS FOR BRANDING*/
 .color-primary-dark {
@@ -104,4 +151,74 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
   }
   .background-lightgrey {
     background: rgb(219,219,219);
+  }
+
+//   SECTION HEIGHT AND WIDTH SETTINGS
+
+  .width50 {
+      width: 50%;
+  }
+
+  .vh15 {
+      height: 15vh;
+  }
+  
+  .vh55 {
+      height: 55vh;
+  }
+  .vh45 {
+      height: 45vh;
+  }
+  .vh50 {
+      height: 50vh;
+  }
+  .vh100 {
+      height: 100vh;
+  }
+// HEADER STYLING
+  .background-logo-header {
+      background-image: url('../images/logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+  }
+  .header-year {
+      padding-top: 50px;
+  }
+  .header-title {
+      margin-left: 25%;
+  }
+
+// NAV STYLING
+
+  .nav-item {
+      width: 33.3%;
+      height: 50vh;
+      padding: 20px 30px;
+  }
+
+  .nav-item a {
+      color: white;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+  .nav-item-img img {
+      width: 50%;
+      max-width: 210px;
+  }
+
+  .nav-item h1 {
+      font-weight: 400;
+  }
+
+//   SECTION HEADLINES
+
+  .section-headline img {
+      max-width: 150px;
+      left: -150px;
+  }
+  .section-headline .wrapper-inner  {
+    
   }
