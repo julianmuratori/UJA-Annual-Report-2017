@@ -171,6 +171,16 @@ summary {
   -ms-flex-align: center;
       align-items: center; }
 
+.flex-vertical {
+  -ms-flex-align: center;
+      align-items: center; }
+
+.spanBold {
+  font-weight: 700; }
+
+.span-italic {
+  font-style: italic; }
+
 body {
   font-family: 'Lato', sans-serif; }
 
@@ -186,7 +196,8 @@ h2 {
   font-size: 30px; }
 
 .header-h2 {
-  line-height: 1.5; }
+  line-height: 1.5;
+  padding-bottom: 25px; }
 
 .header-title h1 {
   font-size: 58px; }
@@ -211,6 +222,9 @@ h2 {
 
 a {
   text-decoration: none; }
+
+.height100 {
+  height: 100%; }
 
 /*COLOUR SETTINGS FOR BRANDING*/
 .color-primary-dark {
@@ -300,6 +314,12 @@ a {
 .width50 {
   width: 50%; }
 
+.width33 {
+  width: 33.3%; }
+
+.width66 {
+  width: 66.6%; }
+
 .vh15 {
   height: 15vh; }
 
@@ -347,4 +367,210 @@ a {
 
 .section-headline img {
   max-width: 150px;
+  position: absolute;
   left: -150px; }
+
+.section-headline h1 {
+  font-weight: 400; }
+
+.with-menorah {
+  background-image: url("../images/icons/menora_0003_Background.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain; }
+
+.letter-container {
+  height: 100%;
+  padding-top: 100px; }
+
+.signature {
+  max-width: 120px; }
+
+p.highlights-padding {
+  padding: 25px 10px 80px 0px; }
+
+.highlights-container {
+  padding: 25px 0; }
+
+.highlights-container .width50 {
+  padding: 0 10px; }
+
+.highlights-container .border-right {
+  border-right: 1px solid black; }
+
+.fundraising-table-cell {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 0 15px;
+  border-bottom: 1px solid black;
+  margin: 0 7px; }
+
+.jewish-future-portrait {
+  height: 50%;
+  position: relative;
+  margin-bottom: 20px; }
+
+.jewish-future-portrait img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.circular-portrait {
+  display: block;
+  margin: 25px auto; }
+
+.community-building {
+  margin: 40px 0; }
+
+.integrated-fundraising {
+  width: 100%;
+  display: block;
+  margin: 40px auto 20px; }
+
+.our-approach-right {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+  .our-approach-right p {
+    margin: 5px 0; }
+  .our-approach-right h3 {
+    margin: 10px 0; }
+
+.six-priorities-sidebar {
+  display: -ms-flexbox;
+  display: flex; }
+
+@media all and (max-width: 1599px) {
+  .section-headline img {
+    position: static; } }
+
+@media all and (max-width: 1175px) {
+  h1 {
+    font-size: 36px; }
+  .wrapper-inner {
+    padding: 0 50px; }
+  .background-logo-header {
+    background-size: 35%; }
+  .header-container {
+    padding-left: 30px; }
+  .header-title {
+    margin-left: 0; }
+  .header-h2 {
+    font-size: 26px; }
+  .letter-container {
+    padding-top: 25px;
+    margin: 0 auto; } }
+
+@media all and (max-width: 950px) {
+  .letter-container {
+    width: 95%;
+    padding-top: 100px; }
+  .highlights-container .border-right {
+    padding: none; }
+  p.highlights-padding {
+    padding: 15px 10px 15px 0; }
+  .jewish-future-portrait {
+    height: auto;
+    text-align: center;
+    padding: 10px 0; }
+    .jewish-future-portrait img {
+      position: static;
+      transform: none; } }
+
+@media all and (max-width: 800px) {
+  .vh100 {
+    height: auto; }
+  .background-logo-header {
+    background-position: top right; }
+  .header-container {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    padding-bottom: 30px; }
+  .header-year h1 {
+    font-size: 90px;
+    padding-top: 40px; }
+  .header-title h1 {
+    font-size: 40px; }
+  .header-h2 {
+    font-size: 22px; }
+  .nav {
+    -ms-flex-direction: column;
+        flex-direction: column; }
+  .nav-item {
+    width: 100%;
+    height: 16.6vh;
+    padding: 0; }
+  .nav-item a {
+    display: -ms-flexbox;
+    display: flex; }
+  .nav-item-img {
+    display: inline-block;
+    margin: auto 0; }
+  .nav-item-img img {
+    width: 120px; }
+  .nav-item-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    width: 100%; }
+    .nav-item-text h1 {
+      padding: 0 2px;
+      text-align: center; }
+  .letter-container {
+    padding-top: 50px; }
+  .highlights-container {
+    -ms-flex-direction: column;
+        flex-direction: column; }
+  .highlights-container .width50 {
+    width: 100%;
+    margin: 0 auto; }
+  .highlights-container .border-right {
+    border: none; }
+  .jewish-future-portrait {
+    margin: 20px 0;
+    padding: 0; } }
+
+@media all and (max-width: 550px) {
+  .vh45 {
+    height: 300px; }
+  .vh55 {
+    height: auto; }
+  .vh100 {
+    height: auto; }
+  .wrapper-inner {
+    padding: 0 10px; }
+  .background-logo-header {
+    background-image: none; }
+  .header-h2 {
+    font-size: 18px; }
+  .section-headline img {
+    max-width: 100px; }
+  .letter-container {
+    width: 100%;
+    padding-top: 10px; } }
+
+@media all and (max-width: 400px) {
+  h1 {
+    font-size: 28px; }
+  .header-year h1 {
+    font-size: 70px; }
+  .header-h2 {
+    font-size: 16px; }
+  .letter-container p {
+    font-size: 14px; } }

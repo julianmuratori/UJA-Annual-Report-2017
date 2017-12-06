@@ -5,12 +5,12 @@
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet">
-	<link rel="stylesheet" href="/public/styles/style.css">
+	<link rel="stylesheet" href="./public/styles/style.css">
 </head>
 <body>
 	<header>
 		<div class="wrapper-outer vh45 background-logo-header">
-			<div class="">
+			<div class="header-container">
 				<div class="header-year">
 					<h1>2016-17</h1>
 				</div>
@@ -19,9 +19,6 @@
 					<h1 class="color-pink">ANNUAL REPORT</h1>
 					<h1 class="color-yellow">TO THE COMMUNITY</h1>
 				</div>
-			</div>
-			<div class="">
-				<img src="" alt="">
 			</div>
 		</div>
 
@@ -38,7 +35,7 @@
 	<main>
 
 		<!-- MAIN NAV SECTION -->
-		<section class="flex flex-wrap vh100 wrapper-outer">
+		<section class="flex flex-wrap vh100 wrapper-outer nav">
 			<div class="nav-item background-primary-light color-white">
 				<a href="">
 					<div class="nav-item-img">
@@ -119,14 +116,14 @@
 
 		<section class="vh100">
 			<div class="section-headline background-primary-light color-white vh15">
-				<div class="wrapper-inner relative flex">
-						<img src="public\images\envelope.png" alt="" class="absolute">
-					<h2 class="">Letter from UJA Federation Leadership</h2>
+				<div class="wrapper-inner relative flex height100 flex-vertical">
+						<img src="public\images\envelope.png" alt="" class="">
+					<h1 class="">Letter from UJA Federation Leadership</h1>
 				</div>
 			</div>
 
-			<div class="wrapper-inner">
-				<div class="width50">
+			<div class="wrapper-inner height100">
+				<div class="width50 flex flex-column letter-container">
 					<p>The Jewish community of Toronto can trace its roots back to the 1800s. As the Jews of Eastern Europe, living under oppression and persecution, fled their towns and villages, many arrived in Toronto seeking freedom where they would be able to openly and joyously celebrate their Judaism.</p>
 
 					<p>In 1917, Toronto’s first Jewish federation – the Federation of Jewish Philanthropies – was incorporated, replacing the unorganized collection of individual Jewish charities, each knocking on doors and collecting funds for their own causes.</p>
@@ -139,15 +136,17 @@
 
 					<p>Appreciatively,</p>
 
-					<div class="width50">
-						<img src="" alt="">
-						<p>Bruce Leboff</p>
-						<p>Chair, Board of Directors</p>
-					</div>
-					<div class="width50">
-						<img src="" alt="">
-						<p>Adam Minsky</p>
-						<p>President and CEO</p>
+					<div class="flex">
+						<div class="width50">
+							<img src="public\images\bruce_leboff.png" alt="" class="signature">
+							<p>Bruce Leboff</p>
+							<p>Chair, Board of Directors</p>
+						</div>
+						<div class="width50">
+							<img src="public\images\adam_minsky.png" alt="" class="signature">
+							<p>Adam Minsky</p>
+							<p>President and CEO</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -156,18 +155,18 @@
 		<!-- 2017 HIGHLIGHTS -->
 		<section>
 			<div class="section-headline background-green color-white">
-				<div class="wrapper-inner">
+				<div class="wrapper-inner relative flex height100 flex-vertical vh15">
 						<img src="public\images\envelope.png" alt="">
-					<h2>2017 Highlights</h2>
+					<h1>2017 Highlights</h1>
 				</div>
 			</div>
 				
-				<div class="wrapper-inner">
-					<div class="width50">
-						<p>Together this community helped raise $148 million, impacting the lives of thousands of Jews, here in Toronto and worldwide. We are building infrastructure for new generations, working on innovative projects that will solve Jewish poverty and creating original initiatives to grow the Jewish identity of our future leaders.</p>
+				<div class="wrapper-inner flex highlights-container">
+					<div class="width50 border-right">
+						<p class="spanBold highlights-padding">Together this community helped raise $148 million, impacting the lives of thousands of Jews, here in Toronto and worldwide. We are building infrastructure for new generations, working on innovative projects that will solve Jewish poverty and creating original initiatives to grow the Jewish identity of our future leaders.</p>
 
-						<h3>OUR COLLECTIVE IMPACT</h3>
-						<p>Total Fundraising: $148 Million</p>
+						<h2 class="color-primary-light">OUR COLLECTIVE IMPACT</h2>
+						<p class="spanBold">Total Fundraising: $148 Million</p>
 
 						<div class="fundraising-table">
 							<div class="fundraising-table-cell">
@@ -226,7 +225,7 @@
 									<p>$544,000</p>
 								</div>
 							</div>
-							<div class="fundraising-table-cell">
+							<div class="fundraising-table-cell color-white background-black">
 								<div class="table-total-area">
 									<p>Total Fundraising</p>
 								</div>
@@ -234,14 +233,16 @@
 									<p>$148,093,000</p>
 								</div>
 							</div>
-							<p>*Other income includes sponsorship and program & event registration</p>
+							<p class="span-italic">*Other income includes sponsorship and program & event registration</p>
 						</div>
 
 					</div>
 					<div class="width50">
-						<img src="http://via.placeholder.com/265x225" alt="">
+						<div class="jewish-future-portrait">
+							<img src="../public/images/photos/jewish_future.png" alt="">
+						</div>
 						
-						<h2>OUR JEWISH FUTURE</h2>
+						<h2 class="color-primary-light">OUR JEWISH FUTURE</h2>
 						
 						<p>New Dimensions: In the past year, The Sarah and Chaim Neuberger Holocaust Education Centre began offering a special learning opportunity that uses groundbreaking technology so visitors can converse with Holocaust survivors now and into the future.</p>
 						
@@ -253,11 +254,11 @@
 		</section>
 
 		<!-- COMMUNITY BUILDING + DISASTER RELIEF -->
-		<section class="wrapper-inner">
-			<div class="width50">
-				<img src="" alt="">
+		<section class="wrapper-inner flex vh100 highlights-container">
+			<div class="width50 border-right">
+				<img src="./public/images/photos/community.png" alt="" class="circular-portrait">
 				
-				<h2>COMMUNITY BUILDING</h2>
+				<h2 class="color-primary-light community-building">COMMUNITY BUILDING</h2>
 				
 				<p>Sheff Family Building ground-breaking: On October 15th, 2017, we held the long awaited groundbreaking for the expanded home of the of the new Sheff Family Building, the future home of the expanded Prosserman Jewish Community Centre on Bathurst Street, just north of Sheppard Avenue.</p>
 				
@@ -268,9 +269,9 @@
 			</div>
 			
 			<div class="width50">
-				<img src="" alt="">
+				<img src="./public/images/photos/disaster.png" alt="" class="circular-portrait">
 				
-				<h2>DISASTER RELIEF</h2>
+				<h2 class="color-primary-light community-building">DISASTER RELIEF</h2>
 				
 				<p>Hurricane Irma Relief: In response to this tragedy, our compassionate and generous community came together, raising more than $52,000 to help victims of Hurricane Irma.</p>
 
@@ -281,43 +282,41 @@
 		</section>
 
 		<!-- OUR APPROACH -->
-		<section>
-			<div class="section-headline background-pink color-white">
-				<div class="wrapper-inner">
+		<section class="vh100">
+			<div class="section-headline background-primary-light color-white">
+				<div class="wrapper-inner relative flex height100 flex-vertical vh15 with-menorah">
 						<img src="public\images\envelope.png" alt="">
-					<h2>Our Approach</h2>
+					<h1>Our Approach</h1>
 				</div>
 			</div>
-			<div class="wrapper-inner">
-				<div class="width50">
-					<p>UJA Federation can only have the impact it does on all the big issues facing the Jewish people through an integrated approach to fundraising. By combining efforts, playing off synergies and leveraging collaborations, the unrestricted campaign, the Jewish Foundation and the capital campaign, are able to affect all aspects of Jewish communal life here in Toronto, Israel and around the world.</p>
+			<div class="wrapper-inner flex highlights-container">
+				<div class="width50 border-right">
+					<p class="spanBold highlights-padding">UJA Federation can only have the impact it does on all the big issues facing the Jewish people through an integrated approach to fundraising. By combining efforts, playing off synergies and leveraging collaborations, the unrestricted campaign, the Jewish Foundation and the capital campaign, are able to affect all aspects of Jewish communal life here in Toronto, Israel and around the world.</p>
 
-					<h3>INTEGRATED FUNDRAISING</h3>
-					<h6>UNITED JEWISH APPEAL</h6>
-					<h6>JEWISH FOUNDATION OF GREATER TORONTO</h6>
-					<h6>THE CAPITAL CAMPAIGN</h6>
+					<h2 class="spanBold">INTEGRATED FUNDRAISING</h2>
+					<img src="/public/images/approach/integrated_fundraising_text.png" alt="" class="integrated-fundraising">
 				</div>
 			
-				<div class="width50">
-					<h3>UNITED JEWISH APPEAL</h3>
+				<div class="width50 our-approach-right">
+					<h3 class="color-primary-light">UNITED JEWISH APPEAL</h3>
 
-					<p>Finding Innovative Solutions</p>
+					<p class="spanBold">Finding Innovative Solutions</p>
 
 					<p>Funds raised by UJA’s Annual Campaign with the help of over 600 volunteer canvassers support more than 100 agencies to strengthen Jewish Life and assist those in need in Toronto, Israel and around the world.</p>
 
 					<p>Annual campaign raised $58,001,000</p>
 
-					<h3>JEWISH FOUNDATION OF GREATER TORONTO</h3>
+					<h3 class="color-pink">JEWISH FOUNDATION OF GREATER TORONTO</h3>
 
-					<p>Life Is Built on Strong Foundations</p>
+					<p class="spanBold">Life Is Built on Strong Foundations</p>
 
 					<p>The Jewish Foundation is a community foundation that makes charitable giving easy and rewarding so that individuals and families can fulfill their personal philanthropic goals and translate their charitable vision into viable solutions to some of our community’s most pressing needs.</p>
 					
 					<p>The Jewish Foundation raised $35,355,000</p>
 
-					<h3>THE CAPITAL CAMPAIGN</h3>
+					<h3 class="color-teal">THE CAPITAL CAMPAIGN</h3>
 
-					<p>Building the Infrastructure for a Vibrant Jewish Community</p>
+					<p class="spanBold">Building the Infrastructure for a Vibrant Jewish Community</p>
 
 					<p>Since 2000, UJA Federation’s Tomorrow Campaign has created three hubs of Jewish life in downtown, mid-town, and York Region to ensure there is infrastructure to support the programmatic, fitness and social needs of the growing Jewish population in the Greater Toronto Area.</p>
 
@@ -327,58 +326,51 @@
 		</section>
 
 		<!-- SIX PRIORITIES -->
-		<section class="wrapper-inner">
-			<div class="six-priorities-header">
+		<section class="wrapper-outer vh100">
+			<div class="six-priorities-header wrapper-inner">
 				<h3>OUR 6 PRIORITIES</h3>
 			</div>
-
-			<div class="width50">
-				<div class="width50">
-					<img src="" alt="">
-					<h4>JEWISH ADVOCACY</h4>
+			<div class="flex six-priorities-container">
+			
+				<div class="six-priorities-sidebar relative width33">
+					<div class="six-priorites-sidebar-image">
+							<img src="/public/images/6priorities_text.png" alt="" class="hi">
+					</div>
 				</div>
-				<div class="width50">
-					<img src="" alt="">
-					<h4>JEWISH COMMUNITY</h4>
+			
+			<div class="width66">
+				<div class="">
+					<img src="/public/images/01priorities_advocacy.png" alt="">
+					<h3 class="color-orange">JEWISH ADVOCACY</h3>
+					<p>The Jewish voice must be heard! UJA supports advocacy for Jews and for Israel, locally and around the globe, to ensure the safety and security of all Jews, everywhere.</p>
 				</div>
-				<div class="width50">
-					<img src="" alt="">
-					<h4>CONNECTIONS TO ISRAEL</h4>
+				<div class="">
+					<img src="/public/images/02priorities_community.png" alt="">
+					<h3 class="color-primary-light">JEWISH COMMUNITY</h3>
+					<p>We are One. In times of universal celebration or crisis, UJA brings together every Jew, regardless of religious, political, or other affiliation.</p>
 				</div>
-				<div class="width50">
-					<img src="" alt="">
-					<h4>JEWISH POVERTY RELIEF</h4>
+				<div class="">
+					<img src="/public/images/06priorities_israel.png" alt="">
+					<h3 class="color-yellow">CONNECTIONS TO ISRAEL</h3>
+					<p>Israel is our cherished homeland. UJA invests in a range of programs that strengthen our ties with Israel and offers a helping hand with aliyah and absorption, vulnerable populations, and education in Israel.</p>
 				</div>
-				<div class="width50">
-					<img src="" alt="">
-					<h4>JEWISH EDUCATION</h4>
+				<div class="">
+					<img src="/public/images/03priorities_poverty.png" alt="">
+					<h3 class="color-purple">JEWISH POVERTY RELIEF</h3>
+					<p>UJA cares deeply for our community’s most vulnerable – those living in poverty, those with mental and physical disabilities, new immigrants, seniors, and Holocaust survivors – any Jew in need.</p>
 				</div>
-				<div class="width50">
-					<img src="" alt="">
-					<h4>JEWISH IDENTITY</h4>
+				<div class="">
+					<img src="/public/images/05priorities_education.png" alt="">
+					<h3 class="color-green">JEWISH EDUCATION</h3>
+					<p>Jewish education determines our Jewish future. UJA supports 48 Jewish day schools and supplementary Hebrew schools across the GTA.</p>
+				</div>
+				<div class="">
+					<img src="/public/images/04priorities_identity.png" alt="">
+					<h3 class="color-teal">JEWISH IDENTITY</h3>
+					<p>Jewish life is beautiful. UJA inspires the next generation to embrace it by supporting a range of programs that awaken the Jewish spirit.</p>
 				</div>
 			</div>
-
-			<div class="width50">
-				
-				<h3>JEWISH ADVOCACY</h3>
-				<p>The Jewish voice must be heard! UJA supports advocacy for Jews and for Israel, locally and around the globe, to ensure the safety and security of all Jews, everywhere.</p>
-				
-				<h3>JEWISH COMMUNITY</h3>
-				<p>We are One. In times of universal celebration or crisis, UJA brings together every Jew, regardless of religious, political, or other affiliation.</p>
-				
-				<h3>JEWISH POVERTY RELIEF</h3>
-				<p>UJA cares deeply for our community’s most vulnerable – those living in poverty, those with mental and physical disabilities, new immigrants, seniors, and Holocaust survivors – any Jew in need.</p>
-				
-				<h3>JEWISH IDENTITY</h3>
-				<p>Jewish life is beautiful. UJA inspires the next generation to embrace it by supporting a range of programs that awaken the Jewish spirit.</p>
-				
-				<h3>JEWISH EDUCATION</h3>
-				<p>Jewish education determines our Jewish future. UJA supports 48 Jewish day schools and supplementary Hebrew schools across the GTA.</p>
-				
-				<h3>CONNECTIONS TO ISRAEL</h3>
-				<p>Israel is our cherished homeland. UJA invests in a range of programs that strengthen our ties with Israel and offers a helping hand with aliyah and absorption, vulnerable populations, and education in Israel.</p>
-			</div>
+		</div>
 		</section>
 
 		<section>
