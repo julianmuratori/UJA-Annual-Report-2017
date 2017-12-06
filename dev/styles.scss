@@ -332,6 +332,12 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 // SIX PRIORITIES
   .six-priorities-sidebar {
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .six-priorities-sidebar-image {
+      max-height: 400px;
+      
   }
 
 // MEDIA QUERIES

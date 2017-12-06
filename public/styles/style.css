@@ -444,7 +444,14 @@ p.highlights-padding {
 
 .six-priorities-sidebar {
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.six-priorities-sidebar-image {
+  max-height: 400px; }
 
 @media all and (max-width: 1599px) {
   .section-headline img {
