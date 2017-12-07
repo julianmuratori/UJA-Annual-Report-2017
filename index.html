@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header id="top">
-		<div class="wrapper-outer vh45 background-logo-header">
+		<div class="wrapper-outer background-logo-header">
 			<div class="header-container">
 				<div class="header-year">
 					<h1>2016-17</h1>
@@ -35,9 +35,43 @@
 	<main>
 
 		<!-- MAIN NAV SECTION -->
-		<section class="flex flex-wrap vh100 wrapper-outer nav">
-			<div class="nav-item background-primary-light color-white">
-				<a href="#letter">
+		<nav class="navigation">
+				<div id="menuToggle">
+				  <!--
+				  A fake / hidden checkbox is used as click reciever,
+				  so you can use the :checked selector on it.
+				  -->
+				  <input type="checkbox" />
+				  
+				  <!--
+				  Some spans to act as a hamburger.
+				  
+				  They are acting like a real hamburger,
+				  not that McDonalds stuff.
+				  -->
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  
+				  <!--
+				  Too bad the menu has to be inside of the button
+				  but hey, it's pure CSS magic.
+				  -->
+				  <ul id="menu">
+					<a href="#letter"><li class="background-primary-light">Letter From UJA Leadership</li></a>
+					<a href="#highlights"><li class="background-green">2017 Highlights</li></a>
+					<a href="#approach"><li class="background-pink">Our Approach</li></a>
+					<a href="#happen"><li class="background-purple">How We Make It Happen</li></a>
+					<a href="#ahead"><li class="background-teal">Looking Ahead to 2018</li></a>
+					<a href="#budget"><li class="background-orange">Budget Allocations 2017/18</li></a>
+					<a href="#top"><li class="background-primary-dark">Back to Top</li></a>
+				  </ul>
+				</div>
+			  </nav>
+
+		<section class="flex flex-wrap wrapper-outer nav">
+			<div class="nav-item color-white">
+				<a href="#letter" class="background-primary-dark">
 					<div class="nav-item-img">
 						<img src="./public/images/envelope.png" alt="">
 					</div>
@@ -49,8 +83,8 @@
 				</a>
 			</div>
 				
-			<div class="nav-item background-green">
-				<a href="#highlights">
+			<div class="nav-item">
+				<a href="#highlights" class="background-green">
 					<div class="nav-item-img">
 						<img src="./public/images/spyglass.png" alt="">
 					</div>
@@ -61,8 +95,8 @@
 				</a>
 			</div>
 				
-			<div class="nav-item background-pink">
-					<a href="#approach">
+			<div class="nav-item">
+					<a href="#approach" class="background-pink">
 						<div class="nav-item-img">
 							<img src="./public/images/gears.png" alt="">
 						</div>
@@ -74,8 +108,8 @@
 					</a>
 				</div>
 					
-				<div class="nav-item background-purple">
-					<a href="#happen">
+				<div class="nav-item">
+					<a href="#happen" class="background-purple">
 						<div class="nav-item-img">
 							<img src="./public/images/handshake.png" alt="">
 						</div>
@@ -86,8 +120,8 @@
 					</a>
 				</div>
 						
-					<div class="nav-item background-teal">
-						<a href="#ahead">
+					<div class="nav-item">
+						<a href="#ahead" class="background-teal">
 							<div class="nav-item-img">
 								<img src="./public/images/rocket.png" alt="">
 							</div>
@@ -99,8 +133,8 @@
 						</a>
 					</div>
 					
-				<div class="nav-item background-yellow">
-					<a href="#budget">
+				<div class="nav-item">
+					<a href="#budget" class="background-yellow">
 						<div class="nav-item-img">
 							<img src="./public/images/envelope.png" alt="">
 						</div>
@@ -114,8 +148,8 @@
 				</div>
 		</section>
 
-		<section class="vh100" id="letter">
-			<div class="section-headline background-primary-light color-white vh15 wrapper-outer">
+		<section class="background-1" id="letter">
+			<div class="section-headline background-primary-light color-white vh15 margin-top-60">
 				<div class="wrapper-inner relative flex height100 flex-vertical">
 						<img src=".\public\images\envelope.png" alt="" class="">
 					<h1 class="">Letter from UJA Federation Leadership</h1>
@@ -153,16 +187,16 @@
 		</section>
 
 		<!-- 2017 HIGHLIGHTS -->
-		<section id="highlights">
-			<div class="section-headline background-green color-white wrapper-outer">
+		<section class="background-2" id="highlights">
+			<div class="section-headline background-green color-white">
 				<div class="wrapper-inner relative flex height100 flex-vertical vh15">
-						<img src=".\public\images\envelope.png" alt="">
+						<img src=".\public\images\spyglass.png" alt="">
 					<h1>2017 Highlights</h1>
 				</div>
 			</div>
 				
 				<div class="wrapper-inner flex highlights-container">
-					<div class="width50 border-right">
+					<div class="width50 padding-right-20">
 						<p class="spanBold highlights-padding">Together this community helped raise $148 million, impacting the lives of thousands of Jews, here in Toronto and worldwide. We are building infrastructure for new generations, working on innovative projects that will solve Jewish poverty and creating original initiatives to grow the Jewish identity of our future leaders.</p>
 
 						<h2 class="color-primary-light">OUR COLLECTIVE IMPACT</h2>
@@ -254,6 +288,7 @@
 		</section>
 
 		<!-- COMMUNITY BUILDING + DISASTER RELIEF -->
+		<div class="background-2">
 		<section class="wrapper-inner flex vh100 highlights-container">
 			<div class="width50 border-right">
 				<img src="./public/images/community.png" alt="" class="circular-portrait">
@@ -280,12 +315,13 @@
 				<p>The funds provided emergency aid and relief in the immediate aftermath of the Hurricanes and are also being used to rebuild infrastructure, restore synagogues and assist day schools. None of this could have happened without the support of our donors.</p>
 			</div>
 		</section>
+	</div>
 
 		<!-- OUR APPROACH -->
-		<section class="vh100 number-one-background" id="approach">
-			<div class="section-headline background-primary-light color-white wrapper-outer">
+		<section class="background-3" id="approach">
+			<div class="section-headline background-pink color-white">
 				<div class="wrapper-inner relative flex height100 flex-vertical vh15 with-menorah">
-						<img src="./public\images\envelope.png" alt="">
+						<img src="./public\images\gears.png" alt="">
 					<h1>Our Approach</h1>
 				</div>
 			</div>
@@ -326,9 +362,9 @@
 		</section>
 
 		<!-- SIX PRIORITIES -->
-		<section class="wrapper-outer vh100 number-two-background">
+		<section class="wrapper-outervh100">
 			<div class="six-priorites-h1 section-headline wrapper-inner">
-				<h1 class="">OUR 6 PRIORITIES</h1>
+				<h1 class="margin-top-30">OUR 6 PRIORITIES</h1>
 			</div>
 			<div class="flex six-priorities-container">
 			
@@ -399,8 +435,8 @@
 		</div>
 		</section>
 
-		<section id="happen">
-			<div class="section-headline background-primary-light color-white wrapper-outer">
+		<section id="happen" class="background-5">
+			<div class="section-headline background-purple color-white">
 					<div class="wrapper-inner relative flex height100 flex-vertical vh15 with-menorah">
 							<img src=".\public\images\handshake.png" alt="">
 						<h1>How We Make It Happen</h1>
@@ -469,7 +505,7 @@
 		</section>
 
 		<!-- CONNECTION TO ISRAEL + ADVOCACY -->
-		<section class="vh100">
+		<section class="background-5">
 			<div class="wrapper-inner highlights-container flex">
 			<div class="width50">
 					<h2 class="color-teal spanBold relative">CONNECTION TO ISRAEL<img src="./public/images/making_connection.png" alt="" class="absolute israel-absolute"></h2>
@@ -534,7 +570,7 @@
 		</section>
 
 				<!-- IDENTITY AND COMMUNITY -->
-		<section class="vh100">
+		<section class="background-5">
 			<div class="wrapper-inner highlights-container flex">
 				<div class="width50">
 					<img src="./public/images/identity.png" class="circular-portrait" alt="">
@@ -598,7 +634,7 @@
 
 		<!-- LOOKING AHEAD -->
 		<section class="" id="ahead">
-			<div class="section-headline background-teal color-white wrapper-outer">
+			<div class="section-headline background-teal color-white">
 				<div class="wrapper-inner relative flex height100 flex-vertical vh15 with-menorah">
 						<img src=".\public\images\rocket.png" alt="">
 					<h1>Looking Ahead to 2018</h1>
@@ -646,7 +682,7 @@
 		</section>
 
 		<footer>
-			<div class="section-headline background-primary-light color-white wrapper-outer">
+			<div class="section-headline background-primary-light color-white">
 				<div class="wrapper-inner relative flex flex-vertical height100 vh15">
 						<img src="public\images\menorah.png" alt="">
 					<h1>UJA Federation Partner Agencies, Programs, and Departments</h1>
@@ -821,9 +857,6 @@
 						<p>Onward Israel</p>
 				</div>
 			</div>
-			</div>
-			<div class="back-to-top background-primary-dark">
-				<a href="#top" class="color-white">Back to Top</a>
 			</div>
 		</footer>
 	</main>

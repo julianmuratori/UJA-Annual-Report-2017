@@ -39,7 +39,9 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
     
 
     h1, h2, h3, h4, h5, h6 {margin: 0;}
-    
+    p {
+        font-size: 20px;
+    }    
     h1 {
         font-size: 45px;
         margin: 0;
@@ -91,9 +93,32 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
     .margin-top-10 {
         margin-top: 10px;
     }
+    .margin-top-60 {
+        margin-top: 60px;
+    }
+    .margin-top-30 {
+        margin-top: 30px;
+    }
+
+    .padding-right-20 {
+        padding-right: 20px;
+    }
 
 
 /*COLOUR SETTINGS FOR BRANDING*/
+
+.background-1 {
+    background: #e9f9ff;
+}
+.background-2 {
+    background: #f3fbd0;
+}
+.background-4 {
+    background: #e9f9ff;
+}
+.background-5 {
+    background: #e8faff;
+}
 .color-primary-dark {
     color: rgb(0, 84, 128);
   }
@@ -221,24 +246,38 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
   }
 
 // NAV STYLING
-
+  
   .nav-item {
       width: 33.3%;
-      height: 50vh;
+    //   height: 50vh;
   }
 
   .nav-item a {
       color: white;
-      display: block;
+      display: flex;
       width: 100%;
       height: 100%;
       transition: all .5s;
       padding: 20px 30px;
     }
-    .nav-item a:hover {
-        filter: opacity(.5);
+    .nav-item a.background-yellow:hover {
+        background-color: #dc9316; 
     }
-
+    .nav-item a.background-teal:hover {
+        background-color: #004e5f; 
+    }
+    .nav-item a.background-green:hover {
+        background-color: #759929; 
+    }
+    .nav-item a.background-purple:hover {
+        background-color: #3d115c; 
+    }
+    .nav-item a.background-pink:hover {
+        background-color: #8f003d; 
+    }
+    .nav-item a.background-primary-dark:hover {
+        background-color: #00a4e3; 
+    }
   .nav-item-img img {
       width: 50%;
       max-width: 210px;
@@ -246,10 +285,148 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 
   .nav-item h1 {
       font-weight: 400;
+      font-size: 34px;
   }
 
-//   SECTION HEADLINES
+//   NAV MOBILE
+.navigation {
+    display: none;
+}
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 10px;
+  left: 5px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
 
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: black;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 100%;
+  margin: -100px 0 0 -50px;
+//   padding: 50px;
+  padding-top: 105px;
+  background: rgba(0, 84, 128,1);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu a {
+    color: white;
+}
+
+#menu li
+{
+  padding: 15px 0 15px 10px;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+//   SECTION HEADLINES
+  #letter {
+    //   margin-top: 15px;
+  }
   .section-headline img {
       max-width: 150px;
       position: absolute;
@@ -270,7 +447,7 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 
   .letter-container {
       height: 100%;
-      padding-top: 100px;
+      padding: 45px 0;
   }
   .signature {
       max-width: 120px;
@@ -286,10 +463,10 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
       padding: 25px 0;
   }
   .highlights-container .width50 {
-      padding: 0 10px;
+      padding: 0 30px;
   }
   .highlights-container .border-right {
-      border-right: 1px solid black;
+    //   border-right: 1px solid black;
   }
 
   .fundraising-table-cell {
@@ -340,21 +517,21 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
           margin: 10px 0;
       }
   }
-  .number-one-background {
-    background-image: url('../images/number1.png');
-    background-size: 250px;
-    background-repeat: no-repeat;
-    background-position-y: 175px;
-    background-position-x: 150px;
-}
+//   .number-one-background {
+//     background-image: url('../images/number1.png');
+//     background-size: 250px;
+//     background-repeat: no-repeat;
+//     background-position-y: 175px;
+//     background-position-x: 150px;
+// }
 
 // SIX PRIORITIES
-  .number-two-background {
-      background-image: url('../images/number2.png');
-      background-size: 250px;
-      background-repeat: no-repeat;
-      background-position-y: 75px;
-  }
+//   .number-two-background {
+//       background-image: url('../images/number2.png');
+//       background-size: 250px;
+//       background-repeat: no-repeat;
+//       background-position-y: 75px;
+//   }
   .six-priorities-header {
       height: 15vh;
   }
@@ -362,6 +539,8 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
       display: flex;
       align-items: center;
       height: 70px;
+      border-top: 1px solid #afafaf;
+
   }
   .six-priorities-container {
       display: flex;
@@ -470,6 +649,9 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
     }
 // MEDIA QUERIES
   @media all and (max-width: 1599px) {
+      .nav-item h1 {
+        //   font-size: 45px;
+      }
       .section-headline img {
           position: static;
       }
@@ -691,6 +873,19 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
   @media all and (max-width: 550px) {
       .back-to-top {
           display: block;
+      }
+      .nav {
+          display: none;
+      }
+      .navigation {
+          z-index: 50;
+          display: block;
+          position: fixed;
+          top: 20px;
+          width: 100%;
+      }
+      p {
+          font-size: 16px;
       }
       section {
         //   margin: 15px 0px;
