@@ -50,6 +50,10 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
         font-size: 30px;
     }
 
+    h6 {
+        font-size: 18px;
+    }
+
     .header-h2 {
         line-height: 1.5;
         padding-bottom: 25px;
@@ -83,6 +87,9 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
     }
     .height100 {
         height: 100%;
+    }
+    .margin-top-10 {
+        margin-top: 10px;
     }
 
 
@@ -218,7 +225,6 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
   .nav-item {
       width: 33.3%;
       height: 50vh;
-      padding: 20px 30px;
   }
 
   .nav-item a {
@@ -226,6 +232,11 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
       display: block;
       width: 100%;
       height: 100%;
+      transition: all .5s;
+      padding: 20px 30px;
+    }
+    .nav-item a:hover {
+        filter: opacity(.5);
     }
 
   .nav-item-img img {
@@ -304,6 +315,7 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
   .circular-portrait {
       display: block;
       margin: 25px auto;
+      max-width: 100%;
   }
 
   .community-building {
@@ -328,22 +340,165 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
           margin: 10px 0;
       }
   }
+  .number-one-background {
+    background-image: url('../images/number1.png');
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position-y: 175px;
+    background-position-x: 150px;
+}
 
 // SIX PRIORITIES
+  .number-two-background {
+      background-image: url('../images/number2.png');
+      background-size: 250px;
+      background-repeat: no-repeat;
+      background-position-y: 75px;
+  }
+  .six-priorities-header {
+      height: 15vh;
+  }
+  .six-priorites-h1 {
+      display: flex;
+      align-items: center;
+      height: 70px;
+  }
+  .six-priorities-container {
+      display: flex;
+      height: 100%;
+  }
   .six-priorities-sidebar {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 33.3%;
   }
   .six-priorities-sidebar-image {
       max-height: 400px;
-      
+  }
+  .six-priorities-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px 30px;
+  }
+  .six-priorities-cell {
+      width: calc(33.3% - 10px);
+      margin: 0 5px;
+      padding: 10px 15px;
+
+      h3 {
+          font-size: 26px;
+          font-weight: 400;
+      }
+      img {
+          display: block;
+          margin: 0 auto 10px;
+      }
   }
 
+//   HOW WE MAKE IT HAPPEN
+  .poverty-cell-small {
+      width: 50%;
+  }
+  .poverty-cell-small p {
+      margin: 0 0 10px 0;
+  }
+  .float {
+    float: left;
+}
+.education-absolute {
+    left: -150px;
+}
+.relief-absolute {
+    bottom: -430px;
+    right: -120px;
+}
+.israel-absolute {
+    left: -150px;
+    bottom: -550px;
+}
+.advocacy-absolute {
+    top: 100px;
+    right: -150px;
+}
+.identity-absolute {
+    left: -150px;
+    top: 200px;
+}
+.community-absolute {
+    right: -150px;
+    top: 150px;
+}
+// UJA FEDERATIONS ALLOCATIONS
+
+    .allocations-padding {
+        padding: 10px 35px;
+    }
+    .allocations-center {
+        justify-content: center;
+    }
+
+    // DEPARTMENTS AND AGENCIES
+
+    .community-list-container {
+        flex-wrap: wrap;
+    }
+    .width25 {
+        width: calc(25% - 20px);
+        margin: 0 10px;
+    }
+    .width25.community-list {
+        p {
+            margin: 3px 0;
+        }
+    }
+    .community-list-title {
+        padding: 10px 0;
+    }
+    .community-list-title-top {
+        padding-bottom: 10px;
+    }
+
+    footer {
+        margin-bottom: 30px;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        padding: 10px;
+        display: none;
+    }
 // MEDIA QUERIES
   @media all and (max-width: 1599px) {
       .section-headline img {
           position: static;
+      }
+      .number-one-background, .number-two-background {
+          background: none;
+      }
+      .education-absolute {
+          left: 350px;
+          top: -40px;
+      }
+      .relief-absolute {
+          top: -35px;
+          right: 0;
+      }
+      .israel-absolute {
+          top: -70px;
+          left: 400px;
+      }
+      .advocacy-absolute {
+          top: -50px;
+          right: 100px;
+      }
+      .identity-absolute {
+          top: -40px;
+          left: 350px;
+      }
+      .community-absolute {
+          top: -50px;
+          left: 350px;
       }
   }
   @media all and (max-width: 1175px) {
@@ -375,6 +530,14 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
         padding-top: 25px;
         margin: 0 auto;
     }
+
+    // SIX PRIORITIES
+    .six-priorities-sidebar {
+        display: none;
+    }
+    .education-absolute, .relief-absolute, .community-absolute, .israel-absolute, .advocacy-absolute, .identity-absolute {
+        display: none;
+    }
   }
 
   @media all and (max-width: 950px) {
@@ -403,12 +566,28 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
           }
       }
 
+      .six-priorities-cell img {
+        max-width: 120px;
+        //   width: 100%;
+      }
+      .poverty-cell-small p {
+          font-size: 14px;
+      }
+
+
+
 }
 
 
   @media all and (max-width: 800px) {
       .vh100 {
           height: auto;
+      }
+      .vh15 {
+          height: auto;
+      }
+      .with-menorah {
+          background: none;
       }
       .background-logo-header {
           background-position: top right;
@@ -487,8 +666,35 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
             margin: 20px 0;
             padding: 0;
         }
+
+        // SIX PRIORITIES
+
+        .six-priorities-cell {
+            width: calc(50% - 10px);
+        }
+        .poverty-cell-small p {
+            font-size: 16px;
+        }
+
+        // ALLOCATIONS
+        .width33, .width66 {
+            width: 100%;
+        }
+        .allocations-center .flex {
+            flex-direction: column;
+        }
+
+        .width25 {
+            width: calc(50% - 20px);
+        }
     }
   @media all and (max-width: 550px) {
+      .back-to-top {
+          display: block;
+      }
+      section {
+        //   margin: 15px 0px;
+      }
       .vh45 {
           height: 300px;
       }
@@ -506,6 +712,7 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
       }
       .header-h2 {
           font-size: 18px;
+          padding: 15px 0;
       }     
 
       .section-headline img {
@@ -515,6 +722,27 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
           width: 100%;
           padding-top: 10px;
       }
+
+    //   SIX PRIORITIES
+
+      .six-priorities-cell {
+          width: 100%;
+          display: flex;
+          padding: 0;
+          margin: 7px 0;
+      }
+      .six-priorities-cell-text {
+          padding-left: 15px;
+      }
+      .poverty-cell-small {
+          width: 100%;
+      }
+      
+    //   AGENCIES AND DEPARTMENTS
+
+    .width25 {
+        width: 100%;
+    }
   }
 
   @media all and (max-width: 400px) {
