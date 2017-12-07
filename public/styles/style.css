@@ -541,6 +541,10 @@ a {
   -ms-flex-align: space-between;
       align-items: space-between; }
 
+.bruce-and-adam div {
+  text-align: center;
+  margin: auto 0; }
+
 p.highlights-padding {
   padding: 25px 10px 80px 0px; }
 
