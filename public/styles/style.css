@@ -528,7 +528,8 @@ a {
 .section-headline img {
   max-width: 130px;
   position: absolute;
-  left: -150px; }
+  left: -150px;
+  top: 0; }
 
 .section-headline h1 {
   font-weight: 400; }
@@ -645,7 +646,8 @@ p.highlights-padding {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 20px 30px; }
+  padding: 20px 30px;
+  width: 66.6%; }
 
 .six-priorities-cell {
   width: calc(33.3% - 10px);
@@ -700,6 +702,19 @@ p.highlights-padding {
 .allocations-center {
   -ms-flex-pack: center;
       justify-content: center; }
+
+.report-button {
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  margin: 25px auto;
+  width: 100%;
+  max-width: 320px;
+  transition: all .3s; }
+
+.report-button:hover {
+  background-color: #D60359; }
 
 .community-list-container {
   -ms-flex-wrap: wrap;
@@ -774,7 +789,9 @@ footer {
   .six-priorities-sidebar {
     display: none; }
   .education-absolute, .relief-absolute, .community-absolute, .israel-absolute, .advocacy-absolute, .identity-absolute {
-    display: none; } }
+    display: none; }
+  .six-priorities-gallery {
+    width: 100%; } }
 
 @media all and (max-width: 950px) {
   .letter-container {
