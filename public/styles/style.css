@@ -188,7 +188,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 p {
-  font-size: 20px; }
+  font-size: 20px;
+  line-height: 24px; }
 
 h1 {
   font-size: 45px;
@@ -243,6 +244,12 @@ a {
 
 .padding-right-20 {
   padding-right: 20px; }
+
+.padding-bottom-30 {
+  padding-bottom: 30px; }
+
+.padding-bottom-60 {
+  padding-bottom: 60px; }
 
 /*COLOUR SETTINGS FOR BRANDING*/
 .background-1 {
@@ -351,7 +358,7 @@ a {
   width: 66.6%; }
 
 .vh15 {
-  height: 15vh; }
+  height: 150px; }
 
 .vh55 {
   height: 55vh; }
@@ -555,7 +562,7 @@ p.highlights-padding {
   padding: 25px 10px 80px 0px; }
 
 .highlights-container {
-  padding: 25px 0; }
+  padding: 35px 0; }
 
 .highlights-container .width50 {
   padding: 0 30px; }
@@ -793,7 +800,7 @@ footer {
   .vh100 {
     height: auto; }
   .vh15 {
-    height: auto; }
+    height: 130px; }
   .with-menorah {
     background: none; }
   .background-logo-header {
@@ -844,6 +851,9 @@ footer {
     .nav-item-text h1 {
       padding: 0 2px;
       text-align: center; }
+  .section-headline img {
+    max-width: 100px;
+    margin-right: 20px; }
   .bruce-and-adam {
     display: none; }
   .letter-container {
@@ -897,8 +907,6 @@ footer {
   .header-h2 {
     font-size: 18px;
     padding: 15px 0; }
-  .section-headline img {
-    max-width: 100px; }
   .letter-container {
     width: 100%;
     padding-top: 10px; }
